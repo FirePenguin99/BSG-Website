@@ -1,7 +1,7 @@
 {
   "name": "bsg-website",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@testing-library/dom": "^10.4.2",
     "@testing-library/jest-dom": "^6.9.1",
@@ -12,7 +12,7 @@
     "react-scripts": "^5.0.1",
     "web-vitals": "^2.1.4"
   },
-  "homepage": "https://FirePenguin99.github.io/bsg-website",
+  "homepage": "https://firepenguin99.github.io/BSG-Website",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
