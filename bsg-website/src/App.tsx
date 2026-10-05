@@ -1,12 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import Homepage from './pages/homepage';
+import { Card, CardAction, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from './components/ui/card';
 
 function App() {
   return (
     <div className="App">
-      <Homepage></Homepage>
+      {/* <Homepage>
+      </Homepage> */}
+      <Card>
+  <CardHeader>
+    <CardTitle>Card Title</CardTitle>
+    <CardDescription>Card Description</CardDescription>
+    <CardAction>Card Action</CardAction>
+  </CardHeader>
+  <CardContent>
+    <p>Card Content</p>
+  </CardContent>
+  <CardFooter>
+    <p>Card Footer</p>
+  </CardFooter>
+</Card>
     </div>
   );
 }
