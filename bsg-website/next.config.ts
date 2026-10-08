@@ -1,9 +1,14 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
-  cacheComponents: true,
-  partialPrefetching: true,
+  output: "export",
+  trailingSlash: true,
+  basePath: process.env.GITHUB_ACTIONS
+    ? `/${process.env.GITHUB_REPOSITORY?.split("/")[1] ?? ""}`
+    : "",
+  images: {
+    unoptimized: true,
+  },
   turbopack: {
     rules: {
       "*.css": {
