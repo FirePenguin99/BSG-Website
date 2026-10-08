@@ -1,4 +1,4 @@
-# bsg-webiste
+# bsg-website
 
 Starter app built with Next.js App Router, React, TypeScript, Tailwind CSS, and
 shadcn/ui.

@@ -28,7 +28,7 @@ export default function Home() {
     <main className="mx-auto flex min-h-screen w-full max-w-5xl flex-col px-6 py-8 sm:px-10 sm:py-12">
       <header className="flex items-center justify-between">
         <Link className="font-semibold tracking-tight" href="/">
-          bsg-webiste
+          bsg-website
         </Link>
         <span className="text-sm text-muted-foreground">
           React · Next.js · TypeScript

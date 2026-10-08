@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "bsg-webiste",
+  title: "bsg-website",
   description: "A Next.js starter with TypeScript and shadcn/ui.",
 };
 
