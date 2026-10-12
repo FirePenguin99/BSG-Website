@@ -7,6 +7,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { ThemeToggle } from "@/components/theme_toggle";
 
 const foundations = [
   {
@@ -33,6 +34,7 @@ export default function Home() {
         <span className="text-sm text-muted-foreground">
           React · Next.js · TypeScript
         </span>
+        <ThemeToggle></ThemeToggle>
       </header>
 
       <section className="flex flex-1 flex-col justify-center py-20">
