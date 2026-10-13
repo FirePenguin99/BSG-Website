@@ -35,31 +35,22 @@ export default function Home() {
           BROKEN STAR GAMES
         </h1>
         <p className="mt-6 max-w-2xl text-lg leading-8 text-muted-foreground">
-          Your Next.js app is ready to build on, with TypeScript, Tailwind CSS,
-          and shadcn/ui components configured and waiting.
+          A hobbyist conceptual game studio where we make the games we'd want to
+          play. Across all genres, we probably have an opinion about it, and therefore a 
+          game idea that at least makes sense to us!
         </p>
-        <div className="mt-8 flex flex-wrap gap-3">
-          <Button
-            render={<Link href="#foundations" />}
-            size="lg"
-          >
-            Explore the stack
-          </Button>
-          <Button
-            render={
-              <a
-                href="https://ui.shadcn.com/docs"
-                target="_blank"
-                rel="noreferrer"
-              />
-            }
-            size="lg"
-            variant="outline"
-          >
-            shadcn/ui docs
-          </Button>
+        <div className="inline mt-6 max-w-2xl italic text-base leading-8 text-muted-foreground">
+          <p className="inline">{"This website was made to practice React.js by Gabriel Lewington (git). The source-code can be found "}
+          </p>
+          <Link href="https://github.com/FirePenguin99/BSG-Website" className="inline underline">
+            here
+          </Link>
+          <p className="inline">{". It is entirely mobile responsive and created with "}</p>
+          <Link className="inline text-link underline" href="https://ui.shadcn.com/docs">
+          Shadcn/ui 
+          </Link>
+          <p className="inline">{" component library"}</p>
         </div>
-
         <div
           className="mt-20 grid gap-4 sm:grid-cols-2 lg:grid-cols-3"
           id="foundations"
