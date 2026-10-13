@@ -28,11 +28,11 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     >
       <body className="min-h-full flex flex-col">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <NavigationHeader tagAndUrls={[
-            { tag: "Games", url: "/games" },
-            { tag: "The Dream", url: "/the-dream" },
-            { tag: "About Us", url: "/about-us" },
-            { tag: "Hot Takes", url: "/hot-takes" }
+          <NavigationHeader pageUrls={[
+            { page: "Games", url: "/games" },
+            { page: "The Dream", url: "/the-dream" },
+            { page: "About Us", url: "/about-us" },
+            { page: "Hot Takes", url: "/hot-takes" }
           ]}></NavigationHeader>
           {children}
         </ThemeProvider>

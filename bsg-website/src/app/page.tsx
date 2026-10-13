@@ -26,23 +26,13 @@ const foundations = [
 
 export default function Home() {
   return (
-    <main className="mx-auto flex min-h-screen w-full max-w-5xl flex-col px-6 py-8 sm:px-10 sm:py-12">
-      <header className="flex items-center justify-between">
-        <Link className="font-semibold tracking-tight" href="/">
-          bsg-website
-        </Link>
-        <span className="text-sm text-muted-foreground">
-          React · Next.js · TypeScript
-        </span>
-        <ThemeToggle></ThemeToggle>
-      </header>
-
-      <section className="flex flex-1 flex-col justify-center py-20">
+    <main className="mx-auto flex w-full flex-col px-6 py-8 sm:px-10 sm:py-12">
+      <section className="flex flex-1 flex-col justify-center py-5">
         <p className="mb-4 text-sm font-medium text-muted-foreground">
-          Your project starts here
+          Our dream Indie game studio...
         </p>
         <h1 className="max-w-3xl text-4xl font-semibold tracking-tight text-balance sm:text-6xl">
-          A clean foundation for what comes next.
+          BROKEN STAR GAMES
         </h1>
         <p className="mt-6 max-w-2xl text-lg leading-8 text-muted-foreground">
           Your Next.js app is ready to build on, with TypeScript, Tailwind CSS,

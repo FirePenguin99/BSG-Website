@@ -12,15 +12,16 @@ import {
 import { Button } from "./ui/button";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/dist/client/components/navigation";
+import { ThemeToggle } from "./theme_toggle";
 
 type NavigationHeaderProps = {
-    tagAndUrls: { tag: string; url: string }[];
+    pageUrls: { page: string; url: string }[];
 }
 
 const mobileBreakpoint = 640;
 
 
-export function NavigationHeader({ tagAndUrls }: NavigationHeaderProps) {
+export function NavigationHeader({ pageUrls: tagAndUrls }: NavigationHeaderProps) {
     const [isMobile, setIsMobile] = useState(false);
 
     useEffect(() => {
@@ -53,24 +54,26 @@ export function NavigationHeader({ tagAndUrls }: NavigationHeaderProps) {
                             {tagAndUrls.map((item) => (
                             <Button variant="link" 
                                     onClick={() => router.push(item.url)}
-                                    className="w-full justify-center">
-                                {item.tag}
+                                    className="w-full justify-center py-8">
+                                {item.page}
                             </Button>
                             ))}
                         </DropdownMenuGroup>
+                        <ThemeToggle label={true} className="w-full justify-center py-4 my-4"></ThemeToggle>
                     </DropdownMenuContent>
                 </DropdownMenu>
             )}
             {!isMobile && (
-                <nav className="inline-flex gap-8 lg:gap-12 pr-8">
+                <nav className="inline-flex gap-6 lg:gap-12 pr-8">
                     {tagAndUrls.map((item) => (
                         <Button variant="link"
                             onClick={() => router.push(item.url)}
                             className="justify-center"
                         >
-                            {item.tag}
+                            {item.page}
                         </Button>
                     ))}
+                    <ThemeToggle label={true}></ThemeToggle>
                 </nav>
             )}
         </header>
