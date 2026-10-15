@@ -40,8 +40,11 @@ export default function Home() {
           game idea that at least makes sense to us!
         </p>
         <div className="inline mt-6 max-w-2xl italic text-base leading-8 text-muted-foreground">
-          <p className="inline">{"This website was made to practice React.js by Gabriel Lewington (git). The source-code can be found "}
-          </p>
+          <p className="inline">{"This website was made to practice React.js by Gabriel Lewington "} </p>
+          <Link href="https://github.com/FirePenguin99" className="inline underline">
+            {"(git)"}
+          </Link>
+          <p className="inline"> {" The source-code can be found "} </p>
           <Link href="https://github.com/FirePenguin99/BSG-Website" className="inline underline">
             here
           </Link>
