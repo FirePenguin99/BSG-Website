@@ -48,7 +48,9 @@ export function NavigationHeader({ pageUrls: tagAndUrls }: NavigationHeaderProps
             <Image src={logo} alt="Logo" className="h-full object-contain w-fit md:pl-4 py-2" onClick={() => router.push('/')} />
             {isMobile && (
                 <DropdownMenu>
-                    <DropdownMenuTrigger render={<Button variant="ghost" className="py-2 h-full aspect-square object-contain"/>}> <Menu className="size-12"/> </DropdownMenuTrigger>
+                    <DropdownMenuTrigger render={<Button variant="ghost" className="py-2 h-full aspect-square object-contain"/>}> 
+                        <Menu className="size-12"/> 
+                    </DropdownMenuTrigger>
                     <DropdownMenuContent className="h-full">
                         <DropdownMenuGroup>
                             {tagAndUrls.map((item) => (

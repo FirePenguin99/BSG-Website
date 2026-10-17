@@ -32,7 +32,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             { page: "Games", url: "/games" },
             { page: "The Dream", url: "/the-dream" },
             { page: "About Us", url: "/about-us" },
-            { page: "Hot Takes", url: "/hot-takes" }
+            { page: "Thought of the day", url: "/thoughts" }
           ]}></NavigationHeader>
           {children}
         </ThemeProvider>
