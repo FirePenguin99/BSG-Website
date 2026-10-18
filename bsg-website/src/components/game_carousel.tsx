@@ -48,7 +48,7 @@ export default function GameCarousel({ className }: GameCarouselProps) {
             >
                 <CarouselContent>
                     {data.map((game, index) => (
-                        <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/2">
+                        <CarouselItem key={index} className="lg:basis-1/2">
                             <GameCard game_title={game.title} game_description={game.description} game_tags={game.tags} gamePageUrl={game.url} imageUri={game.imageUrl} />
                         </CarouselItem>
                     ))}
