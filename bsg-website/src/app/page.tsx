@@ -1,7 +1,10 @@
 import Link from "next/link";
 import GameCarousel from "@/components/game_carousel";
+import RouterButton from "@/components/router_button";
 
 export default function Home() {
+  const gamePageUrl = "/games";
+
   return (
     <main className="mx-auto max-w-8xl flex w-full flex-col px-6 py-8 sm:px-10 sm:py-12">
       <section className="flex flex-1 flex-col justify-center py-5">
@@ -38,6 +41,13 @@ export default function Home() {
       <section>
         <h2 className="max-w-3xl my-5 text-3xl font-semibold tracking-tight text-balance sm:text-5xl">Our Games</h2>
         <GameCarousel className="my-5" />
+        <RouterButton
+          className="mx-auto my-10 flex justify-center w-full max-w-sm h-15" 
+          variant="outline"
+          url={gamePageUrl}
+          >
+          View the full nascent library!
+        </RouterButton>
       </section>
 
       <footer className="border-t pt-5 text-sm text-muted-foreground">
