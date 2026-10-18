@@ -45,7 +45,7 @@ export function NavigationHeader({ pageUrls: tagAndUrls }: NavigationHeaderProps
 
     return (
         <header className="w-screen  h-36 bg-backerground ">
-            <div className="mx-auto h-full max-w-7xl flex items-center justify-between">
+            <div className="mx-auto h-full max-w-8xl flex items-center justify-between">
                 <Image src={logo} alt="Logo" className="h-full object-contain w-fit md:pl-4 py-2" onClick={() => router.push('/')}/>
                 {isMobile && (
                     <DropdownMenu>

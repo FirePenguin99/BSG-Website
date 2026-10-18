@@ -3,7 +3,7 @@ import GameCarousel from "@/components/game_carousel";
 
 export default function Home() {
   return (
-    <main className="mx-auto max-w-7xl flex w-full flex-col px-6 py-8 sm:px-10 sm:py-12">
+    <main className="mx-auto max-w-8xl flex w-full flex-col px-6 py-8 sm:px-10 sm:py-12">
       <section className="flex flex-1 flex-col justify-center py-5">
         <p className="mb-4 text-sm font-medium text-muted-foreground">
           Our dream Indie game studio...
