@@ -1,6 +1,7 @@
 import Link from "next/link";
 import GameCarousel from "@/components/game_carousel";
 import RouterButton from "@/components/router_button";
+import { AllGameData } from "./game_data";
 
 export default function Home() {
   const gamePageUrl = "/games";
@@ -40,7 +41,7 @@ export default function Home() {
 
       <section>
         <h2 className="max-w-3xl my-5 text-3xl font-semibold tracking-tight text-balance sm:text-5xl">Our Games</h2>
-        <GameCarousel className="my-5" />
+        <GameCarousel className="my-5" game_data={AllGameData} />
         <RouterButton
           className="text-md mx-auto my-10 flex justify-center w-full max-w-sm h-15" 
           variant="outline"
