@@ -7,7 +7,7 @@ import {
 } from "@/components/ui/carousel"
 import Autoplay from "embla-carousel-autoplay"
 import GameCard from "./game_card";
-import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
+import { Card, CardContent } from "./ui/card";
 import RouterButton from "./router_button";
 
 export interface GameCarouselProps {
@@ -21,6 +21,7 @@ const data = [
         tags: ["Character Action", "Roguelike", "Co-op"],   
         url: "" ,
         imageUrl: "",
+        isInDevelopment: false,
     },
     {
         title: "Ecosmos",
@@ -28,6 +29,7 @@ const data = [
         tags: ["Cozy", "Logistics-sim", "Co-op"],   
         url: "" ,
         imageUrl: "",   
+        isInDevelopment: false,
     },
     {
         title: "Court Casters",
@@ -35,6 +37,7 @@ const data = [
         tags: ["Local co-op", "Casual", "Party Game"],
         url: "",
         imageUrl: "",
+        isInDevelopment: true,
     },
 ];
 
@@ -51,7 +54,7 @@ export default function GameCarousel({ className }: GameCarouselProps) {
                 <CarouselContent>
                     {data.map((game, index) => (
                         <CarouselItem key={index} className="lg:basis-1/2">
-                            <GameCard game_title={game.title} game_description={game.description} game_tags={game.tags} gamePageUrl={game.url} imageUri={game.imageUrl} />
+                            <GameCard game_title={game.title} game_description={game.description} game_tags={game.tags} gamePageUrl={game.url} imageUri={game.imageUrl} isInDevelopment={game.isInDevelopment} />
                         </CarouselItem>
                     ))}
                     <CarouselItem className="lg:basis-1/2">

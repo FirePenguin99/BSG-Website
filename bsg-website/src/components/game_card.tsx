@@ -4,36 +4,54 @@ import RouterButton from "./router_button";
 
 export interface GameCardProps {
     className?: string;
+    addedHeight?: string;
     game_title: string;
     game_description: string;
     game_tags?: string[];
+    game_inspirations?: string[];
     gamePageUrl: string;
     imageUri?: string;
+    isInDevelopment?: boolean;
 }
 
-export default function GameCard({ className, game_title, game_description, game_tags, gamePageUrl, imageUri }: GameCardProps) {
+export default function GameCard({ className, addedHeight, game_title, game_description, game_tags, game_inspirations, gamePageUrl, imageUri, isInDevelopment }: GameCardProps) {
     return (
         <div className={`p-1 ${className}`}>
             <Card>
                 <CardContent
                     style={{ "--image-url": `url(${imageUri})` } as React.CSSProperties}
-                    className="bg-[image:var(--image-url)] aspect-5/4 flex flex-row gap-3 items-end justify-between">
-                    <div>
+                    className="relative bg-[image:var(--image-url)] aspect-5/4 flex flex-col items-end justify-between">
+
+                    
+
+                    <span className={`h-30 w-0 ${addedHeight}`}></span>
+
+                    <div className="flex flex-col gap-1">
                         <h1 className="md:text-2xl font-bold">{game_title}</h1>
                         <h2 className="text-xs lg:text-lg text-muted-foreground">{game_description}</h2>
-                        {game_tags && game_tags.length > 0 && (
-                            <div className="flex flex-wrap gap-2 mt-2 ">
-                                {game_tags.map((tag, index) => (
-                                    <span key={index} className="bg-primary text-primary-foreground px-2 py-1 rounded-md text-2xs md:text-sm  shrink">
-                                        {tag}
-                                    </span>
-                                ))}
-                            </div>
+
+                        {game_inspirations && game_inspirations.length > 0 && (
+                            <span className="text-sm lg:text-lg">{`Inspired by: ${game_inspirations.join(", ")}`}</span>
                         )}
+                        
+                        <div className="flex flex-wrap gap-2 justify-between">
+                            {game_tags && game_tags.length > 0 && (
+                                <div className="flex flex-wrap gap-2 mt-2 ">
+                                    {game_tags.map((tag, index) => (
+                                        <span key={index} className="bg-primary text-primary-foreground px-2 py-1 rounded-md text-2xs md:text-sm  shrink">
+                                            {tag}
+                                        </span>
+                                    ))}
+                                </div>
+                            )}
+                            <RouterButton className="md:p-5 text-xs md:text-sm" url={gamePageUrl} variant="secondary">
+                                {"Learn More"}
+                            </RouterButton>
+                        </div>
                     </div>
-                    <RouterButton className="md:p-5 text-xs md:text-sm" url={gamePageUrl}>
-                        {"Learn More"}
-                    </RouterButton>
+                    {isInDevelopment && (
+                        <span className="bg-blue-500 p-1 lg:py-2 px-10 rotate-45 text-xs whitespace-nowrap absolute top-4 -right-12">IN DEVELOPMENT</span>
+                    )}
                 </CardContent>
             </Card>
         </div>
