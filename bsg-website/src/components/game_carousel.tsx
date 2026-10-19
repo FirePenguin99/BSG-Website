@@ -7,6 +7,8 @@ import {
 } from "@/components/ui/carousel"
 import Autoplay from "embla-carousel-autoplay"
 import GameCard from "./game_card";
+import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
+import RouterButton from "./router_button";
 
 export interface GameCarouselProps {
     className?: string;
@@ -52,6 +54,18 @@ export default function GameCarousel({ className }: GameCarouselProps) {
                             <GameCard game_title={game.title} game_description={game.description} game_tags={game.tags} gamePageUrl={game.url} imageUri={game.imageUrl} />
                         </CarouselItem>
                     ))}
+                    <CarouselItem className="lg:basis-1/2">
+                        <div className="p-1">
+                            <Card>
+                                <CardContent className="aspect-5/4 flex flex-col md:flex-row items-center justify-center p-6 gap-1">
+                                    <span className="text-2xl">{"Check out the full library"}</span>
+                                    <RouterButton className="text-2xl" url="/games" variant="secondary">
+                                        {"here!"}
+                                    </RouterButton>
+                                </CardContent>
+                            </Card>
+                        </div>
+                    </CarouselItem>
                 </CarouselContent>
                 <CarouselPrevious className="hidden md:flex" />
                 <CarouselNext className="hidden md:flex" />
