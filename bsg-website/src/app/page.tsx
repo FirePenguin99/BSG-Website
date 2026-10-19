@@ -43,10 +43,10 @@ export default function Home() {
         <h2 className="max-w-3xl my-5 text-3xl font-semibold tracking-tight text-balance sm:text-5xl">Our Games</h2>
         <GameCarousel className="my-5" game_data={AllGameData} />
         <RouterButton
-          className="text-md mx-auto my-10 flex justify-center w-full max-w-sm h-15" 
+          className="text-md mx-auto my-10 flex justify-center w-full max-w-sm h-15"
           variant="outline"
           url={gamePageUrl}
-          >
+        >
           View the full nascent library!
         </RouterButton>
       </section>

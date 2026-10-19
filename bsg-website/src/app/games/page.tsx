@@ -18,7 +18,7 @@ export default function GameList() {
         {AllGameData.map((game, index) => (
           <GameCard
             className="lg:basis-1/3"
-            key={index} 
+            key={index}
             addedHeight="h-60"
             game_data={game} />
         ))}

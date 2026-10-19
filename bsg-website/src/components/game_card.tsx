@@ -1,5 +1,4 @@
 import { Card, CardContent } from "@/components/ui/card"
-import { Button } from "./ui/button";
 import RouterButton from "./router_button";
 import { type GameDataStructure } from "@/app/game_data";
 
@@ -26,7 +25,7 @@ export default function GameCard({ className, addedHeight, game_data }: GameCard
                         {game_data.inspirations && game_data.inspirations.length > 0 && (
                             <span className="text-sm lg:text-lg">{`Inspired by: ${game_data.inspirations.join(", ")}`}</span>
                         )}
-                        
+
                         <div className="flex flex-wrap gap-2 justify-between">
                             {game_data.tags && game_data.tags.length > 0 && (
                                 <div className="flex flex-wrap gap-2 mt-2 ">
