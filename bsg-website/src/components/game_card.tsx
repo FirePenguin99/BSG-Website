@@ -20,7 +20,7 @@ export default function GameCard({ className, addedHeight, game_data }: GameCard
 
                     <div className="flex flex-col gap-1">
                         <h1 className="md:text-2xl font-bold">{game_data.title}</h1>
-                        <h2 className="text-xs lg:text-lg text-muted-foreground">{game_data.description}</h2>
+                        <h2 className="text-xs lg:text-lg text-muted-foreground">{game_data.blurb}</h2>
 
                         {game_data.inspirations && game_data.inspirations.length > 0 && (
                             <div>
@@ -40,7 +40,7 @@ export default function GameCard({ className, addedHeight, game_data }: GameCard
                                     ))}
                                 </div>
                             )}
-                            <RouterButton className="md:p-5 text-xs md:text-sm" url={`games/${SlugifyTitle(game_data.title)}`} variant="secondary">
+                            <RouterButton className="md:p-5 text-xs md:text-sm" url={`/games/${SlugifyTitle(game_data.title)}`} variant="secondary">
                                 {"Learn More"}
                             </RouterButton>
                         </div>
