@@ -1,7 +1,7 @@
 'use client'
 
 import type { ComponentProps } from "react";
-import { useRouter } from "next/dist/client/components/navigation";
+import { useRouter } from "next/navigation";
 import { Button } from "./ui/button";
 
 export interface RouterButtonProps {

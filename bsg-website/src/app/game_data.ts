@@ -8,6 +8,14 @@ export type GameDataStructure = {
     isInDevelopment?: boolean;
 }
 
+export function SlugifyTitle(title: string): string {
+    return title
+        .toLowerCase()
+        .replace(/[^\w\s-]/g, "")
+        .trim()
+        .replace(/\s+/g, "-")
+}
+
 export const HeavenSentAngels: GameDataStructure = {
     title: "Heaven Sent Angels",
     description: "Hear and Obey. The tides of Hell are ceaseless and once more must be cut down. Take up arms of your choosing, plunge into the mouth of Hell, and scavenge off your deactivated brethren. Hold the line.",

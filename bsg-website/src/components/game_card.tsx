@@ -1,6 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card"
 import RouterButton from "./router_button";
-import { type GameDataStructure } from "@/app/game_data";
+import { SlugifyTitle, type GameDataStructure } from "@/app/game_data";
 
 export interface GameCardProps {
     className?: string;
@@ -40,7 +40,7 @@ export default function GameCard({ className, addedHeight, game_data }: GameCard
                                     ))}
                                 </div>
                             )}
-                            <RouterButton className="md:p-5 text-xs md:text-sm" url={game_data.gamePageUrl} variant="secondary">
+                            <RouterButton className="md:p-5 text-xs md:text-sm" url={`games/${SlugifyTitle(game_data.title)}`} variant="secondary">
                                 {"Learn More"}
                             </RouterButton>
                         </div>
