@@ -6,6 +6,8 @@ import { AllGameData } from "./game_data";
 export default function Home() {
   const gamePageUrl = "/games";
 
+  const carouselLength = 3;
+
   return (
     <main className="mx-auto max-w-8xl flex w-full flex-col px-6 py-8 sm:px-10 sm:py-12">
       <section className="flex flex-1 flex-col justify-center py-5">
@@ -41,7 +43,9 @@ export default function Home() {
 
       <section>
         <h2 className="max-w-3xl my-5 text-3xl font-semibold tracking-tight text-balance sm:text-5xl">Our Games</h2>
-        <GameCarousel className="my-5" game_data={AllGameData} />
+        <GameCarousel className="my-5"
+          game_data={AllGameData.slice(0, carouselLength).map((game) => ({ ...game, inspirations: [] }))} // remove Inspirations for carousel display
+        />
         <RouterButton
           className="text-md mx-auto my-10 flex justify-center w-full max-w-sm h-15"
           variant="outline"

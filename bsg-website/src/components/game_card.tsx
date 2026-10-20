@@ -14,7 +14,7 @@ export default function GameCard({ className, addedHeight, game_data }: GameCard
             <Card>
                 <CardContent
                     style={{ "--image-url": `url(${game_data.imageUri})` } as React.CSSProperties}
-                    className="relative bg-[image:var(--image-url)] aspect-5/4 flex flex-col items-end justify-between">
+                    className="relative bg-[image:var(--image-url)] aspect-5/4 flex flex-col justify-between">
 
                     <span className={`h-30 w-0 ${addedHeight}`}></span>
 
@@ -23,7 +23,11 @@ export default function GameCard({ className, addedHeight, game_data }: GameCard
                         <h2 className="text-xs lg:text-lg text-muted-foreground">{game_data.description}</h2>
 
                         {game_data.inspirations && game_data.inspirations.length > 0 && (
-                            <span className="text-sm lg:text-lg">{`Inspired by: ${game_data.inspirations.join(", ")}`}</span>
+                            <div>
+
+                                <span className="text-xs lg:text-lg text-muted-foreground">{`Inspired by: `}</span>
+                                <span className="text-xs lg:text-lg">{game_data.inspirations.join(", ")}</span>
+                            </div>
                         )}
 
                         <div className="flex flex-wrap gap-2 justify-between">
