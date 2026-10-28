@@ -58,7 +58,7 @@ export default async function Page({
             <p className="mt-6 max-w-2xl text-lg leading-8 text-muted-foreground">
               <i>{game.blurb}</i>
             </p>
-            <p className="mt-6 max-w-2xl text-lg leading-8 text-muted-foreground">
+            <p className="mt-6  text-lg leading-8 text-muted-foreground">
               {game.description}
             </p>
           </section>
@@ -74,9 +74,9 @@ export default async function Page({
                 {!point.imageUrl && (
                   <div className="bg-black w-full my-6 aspect-5/4 flex justify-center items-center">NO IMAGE</div>
                 )}                
-                <h2 className="text-muted-foreground text-2xl uppercase">{point.subtitle}</h2>
+                <h2 className="text-muted-foreground text-md">{point.subtitle}</h2>
                 <h1 className="font-semibold text-3xl uppercase">{point.title}</h1>
-                <p className="text-lg leading-8 text-muted-foreground">
+                <p className="text-md md:text-lg leading-8 text-muted-foreground">
                   {point.description}
                 </p>
               </div>

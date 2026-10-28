@@ -27,8 +27,8 @@ export function SlugifyTitle(title: string): string {
 export const HeavenSentAngels: GameDataStructure = {
     introduction: "Become His vengeance in...",
     title: "Heaven Sent Angels",
-    blurb: "Hear and Obey. The tides of Hell are ceaseless and once more must be cut down. Take up arms of your choosing, plunge into the mouth of Hell, and scavenge off your deactivated brethren. Hold the line.",
-    description: "",
+    blurb: "Hear and Obey. The tides of Hell are ceaseless and once more must be cut down. Take up arms of your choosing, plunge into the mouth of Hell, and scavenge off your deactivated brethren. Return is not an option.",
+    description: "Heaven-Sent Angels is a Character Action Rogue-like, mixing the 3rd Person Melee combat of Metal Gear Rising and Sekiro’s parry aesthetic with the gameplay loop and progression of Risk of Rain and Hades. You will play as an Archangel, robots created by a god-like being to cleanse the ever-growing, discarded experiments thrown into Hell. Complete your duty and cut away the cancer. This game seeks to improve on the fast paced melee character action of Metal Gear Rising: Revengeance, whilst putting such a combat system in the setting of a Rogue-Like.",
     tags: ["Character Action RPG", "Rogue-like", "Co-op"],
     inspirations: ["Metal Gear Rising: Revengeance", "Hades", "Risk of Rain 2"],
     gamePageUrl: "",
@@ -36,27 +36,27 @@ export const HeavenSentAngels: GameDataStructure = {
     isInDevelopment: false,
     sellingPoints: [
         {
-            subtitle: "hi",
-            title: "HELLO!",
-            description: "sub"
+            subtitle: "Feel the speed of a mix between Metal Gear Rising and Sekiro",
+            title: "Lightning Fast melee combat",
+            description: "Bosses and enemies require constant movement, with a mix of parries, dodges, jumps and flips. Each weapon will have its own moveset, all different in playstyles but all equipped with defensive and re-engaging moves to keep the pace of the fight fast. Players will have timed recovery moves if they are knocked away or to the floor."
         },
         {
-            subtitle: "hi",
-            title: "HELLO!",
-            description: "sub"
+            subtitle: "Face the discarded experiments of The Lord",
+            title: "Delve into the layers of Hell",
+            description: "Players will have movement tools to cross the environments of Hell, from its vast plains to its plunging depths"
         },
         {
-            subtitle: "hi",
-            title: "HELLO!",
+            subtitle: "Rediscover powerful discarded heavenly technology",
+            title: "Gain Angelic power through a run",
             description: "sub"
         },
     ]
 };
 
 export const Ecosmos: GameDataStructure = {
-    introduction: "Rewild the cosmos in...",
+    introduction: "Rewild the universe in...",
     title: "Ecosmos",
-    blurb: "An ancient, great calamity has left the cosmos barren and lifeless. Create new ecosystems to revive dead worlds, and bring the cosmos back to its former verdant glory.",
+    blurb: "An ancient, great calamity has left planets barren and lifeless. Create new ecosystems to revive dead worlds, and bring the cosmos back to its former verdant glory.",
     description: "",
     tags: ["Cozy", "Logistics-sim", "Co-op"],
     inspirations: ["Astroneer", "Satisfactory", "Proteus"],
