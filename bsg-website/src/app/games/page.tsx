@@ -1,12 +1,9 @@
 import GameCard from "@/components/game_card";
 import { AllGameData } from "@/app/game_data";
 
-export default async function GameList({ params, }: { params: Promise<{ slug: string }> }) {
-  const { slug } = await params
-
+export default async function GameList() {
   return (
     <main className="mx-auto max-w-8xl flex w-full flex-col px-6 py-8 sm:px-10 sm:py-12">
-      <p>{slug}</p>
       <section className="flex flex-1 flex-col justify-center py-5">
         <p className="mb-4 text-sm font-medium text-muted-foreground">
           Welcome to...

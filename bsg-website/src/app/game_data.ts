@@ -159,4 +159,4 @@ export const AllGameData: GameDataStructure[] = [
     RevengeOfTheBloodGod,
     StarlightAfterburner,
     ReachTheCitadel
-];;
+];

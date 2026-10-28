@@ -34,7 +34,7 @@ export default function GameCard({ className, addedHeight, game_data }: GameCard
                             {game_data.tags && game_data.tags.length > 0 && (
                                 <div className="flex flex-wrap gap-2 mt-2 ">
                                     {game_data.tags.map((tag, index) => (
-                                        <span key={index} className="bg-primary text-primary-foreground px-2 py-1 rounded-md text-2xs md:text-sm  shrink">
+                                        <span key={index} className="bg-primary text-primary-foreground px-2 py-1 rounded-md text-2xs md:text-sm shrink flex items-center">
                                             {tag}
                                         </span>
                                     ))}
