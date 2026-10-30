@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import { Button } from "./ui/button";
 
 export interface RouterButtonProps {
-    children: React.ReactNode;
+    children?: React.ReactNode;
     className?: string;
     url: string;
     variant?: ComponentProps<typeof Button>["variant"];

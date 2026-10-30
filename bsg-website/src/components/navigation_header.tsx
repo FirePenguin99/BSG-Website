@@ -13,6 +13,7 @@ import { Button } from "./ui/button";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/dist/client/components/navigation";
 import { ThemeToggle } from "./theme_toggle";
+import RouterButton from "./router_button";
 
 type NavigationHeaderProps = {
     pageUrls: { page: string; url: string }[];
@@ -55,11 +56,11 @@ export function NavigationHeader({ pageUrls: tagAndUrls }: NavigationHeaderProps
                         <DropdownMenuContent className="h-full">
                             <DropdownMenuGroup>
                                 {tagAndUrls.map((item) => (
-                                    <Button variant="link"
-                                        onClick={() => router.push(item.url)}
-                                        className="w-full justify-center py-8">
+                                    <RouterButton variant="link"
+                                    url={item.url}
+                                    className="w-full justify-center py-8">
                                         {item.page}
-                                    </Button>
+                                    </RouterButton>
                                 ))}
                             </DropdownMenuGroup>
                             <ThemeToggle label={true} className="w-full justify-center py-4 my-4"></ThemeToggle>
@@ -69,12 +70,12 @@ export function NavigationHeader({ pageUrls: tagAndUrls }: NavigationHeaderProps
                 {!isMobile && (
                     <nav className="inline-flex gap-6 lg:gap-12 pr-8">
                         {tagAndUrls.map((item) => (
-                            <Button variant="link"
-                                onClick={() => router.push(item.url)}
+                            <RouterButton variant="link"
+                                url={item.url}
                                 className="justify-center"
                             >
                                 {item.page}
-                            </Button>
+                            </RouterButton>
                         ))}
                         <ThemeToggle label={true}></ThemeToggle>
                     </nav>

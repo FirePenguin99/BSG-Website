@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/breadcrumb"
 import { Image } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
+import RouterButton from "@/components/router_button";
 
 export function generateStaticParams() {
   return AllGameData.map((game) => ({
@@ -33,11 +34,11 @@ export default async function Page({
           <Breadcrumb>
             <BreadcrumbList>
               <BreadcrumbItem>
-                <BreadcrumbLink render={<a href="/" />}>Home</BreadcrumbLink>
+                <BreadcrumbLink render={<RouterButton url="/" variant={"ghost"}></RouterButton>}>Home</BreadcrumbLink>
               </BreadcrumbItem>
               <BreadcrumbSeparator />
               <BreadcrumbItem>
-                <BreadcrumbLink render={<a href="/games" />}>
+                <BreadcrumbLink render={<RouterButton url="/games" variant={"ghost"}></RouterButton>}>
                   Games
                 </BreadcrumbLink>
               </BreadcrumbItem>
