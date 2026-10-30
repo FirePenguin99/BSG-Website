@@ -142,7 +142,7 @@ export const ReachTheCitadel: GameDataStructure = {
     title: "Reach The Citadel",
     blurb: "Battle in a 12v12 casual team shooter, playing as any of the morally dubious experiments of an Arms Contractor's R&D division in their testing grounds. Each class is distinct in personality and role, with unique equip-able weapons and cosmetics to shake up their playstyle and looks.",
     description: "",
-    tags: ["FPS", "Hero Shooter", "Multiplayer PVP"],
+    tags: ["FPS", "Class Shooter", "Multiplayer PVP"],
     inspirations: ["Team Fortress 2", "Dirty Bomb", "Sci-fi Military"],
     gamePageUrl: "",
     imageUri: "",

@@ -30,8 +30,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <NavigationHeader pageUrls={[
             { page: "Games", url: "/games" },
-            { page: "The Dream", url: "/the-dream" },
             { page: "About Us", url: "/about-us" },
+            { page: "The Dream", url: "/about-us#dream" },
             { page: "Thought of the day", url: "/thoughts" }
           ]}></NavigationHeader>
           {children}

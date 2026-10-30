@@ -55,9 +55,6 @@ export default function Home() {
         </RouterButton>
       </section>
 
-      <footer className="border-t pt-5 text-sm text-muted-foreground">
-        Start building in <code className="font-mono">src/app/page.tsx</code>
-      </footer>
     </main>
   );
 }
